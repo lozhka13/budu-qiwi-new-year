@@ -1,0 +1,19 @@
+@import '../../scss/variables.scss';
+
+.container {
+  margin: 0 auto;
+  // padding: 0 1rem;
+
+  @media only screen and (min-width: $smallTablet) {
+    // padding: 0 5rem;
+    max-width: $smallTablet;
+  }
+
+  @media only screen and (min-width: $largeTablet) {
+    max-width: $largeTablet;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    max-width: $desktop;
+  }
+}

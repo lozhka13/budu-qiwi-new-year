@@ -1,0 +1,20 @@
+@import '../../scss/variables.scss';
+
+.footer {
+  padding: 0 1rem;
+  width: 100%;
+
+  background-color: white;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (min-width: $largeTablet) {
+    padding: 0;
+  }
+
+  &__container {
+    background-color: white;
+  }
+}

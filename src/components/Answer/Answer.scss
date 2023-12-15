@@ -1,0 +1,46 @@
+@import '../../scss/variables.scss';
+
+.answer {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #E0E0E7;
+  border-radius: 12px 12px 12px 3px;
+
+  background-color: white;
+  color: black;
+
+  cursor: pointer;
+
+  transition: 180ms;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: $gap;
+
+  span {
+    line-height: 1.4;
+  }
+
+  img {
+    opacity: 0;
+    transition: 250ms;
+  }
+
+  &--checked {
+    background-color: rgba(0, 0, 0, 15%);
+    color: white;
+
+    img {
+      opacity: 1;
+    }
+  }
+
+  .answer__checkbox {
+    display: none;
+  }
+
+  @media (hover: hover) {
+    &--not-checked:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}

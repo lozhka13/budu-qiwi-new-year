@@ -1,0 +1,36 @@
+@import '../../scss/variables.scss';
+
+.button {
+  background-color: black;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: 250ms;
+
+  &:hover {
+    background-color: #343434;
+  }
+
+  &:disabled {
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+  }
+
+  &--common {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+  }
+
+  &--large {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 24px 64px;
+
+    @media only screen and (min-width: $smallTablet) {
+      width: unset;
+    }
+  }
+}
