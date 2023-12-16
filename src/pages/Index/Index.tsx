@@ -8,6 +8,7 @@ import ElkaFull from "../../assets/elka-full.svg";
 import ElkaFullMobile from "../../assets/elka-full-mobile.svg";
 import { useNavigate } from "react-router-dom";
 import MediaQuery from "react-responsive";
+import TypingBubble from "../../components/TypingBubble/TypingBubble";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -46,9 +47,10 @@ const Index = () => {
             <Button onClick={handleClick} size="large">
               Спасти ёлочку
             </Button>
-          </div>
-          <div>
-            <img src={AleIcon} alt="" />
+            <div className="hero__chat">
+              <img src={AleIcon} alt="" />
+              <TypingBubble />
+            </div>
           </div>
         </div>
         <div className="hero__right">
