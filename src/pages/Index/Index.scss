@@ -13,17 +13,10 @@
 
 .hero {
   display: flex;
-
   justify-content: center;
   height: calc(100svh - 38px - 2rem);
   flex-direction: column-reverse;
   justify-content: flex-start;
-  // position: absolute;
-  // left: 0;
-  // bottom: 64px;
-
-  // width: 100%;
-
 
   @media only screen and (min-width: $desktop) {
     grid-template-columns: 1fr 1fr;
@@ -31,9 +24,6 @@
     display: grid;
     min-height: calc(100vh - 76px);
     justify-content: unset;
-    // padding: 3.5rem 1rem 0 1rem;
-    // position: static;
-    // background-color: unset;
   }
 
   &__heading {
@@ -43,18 +33,15 @@
     font-weight: 500;
     margin-bottom: 0.75rem;
 
-
     @media only screen and (min-width: $desktop) {
       line-height: 1.1;
       text-align: left;
       font-size: 3rem;
       margin-bottom: 1.5rem;
-
     }
   }
 
   &__subheading {
-    // width: 578px;
     line-height: 1.4;
     font-size: 0.875rem;
     margin-bottom: 1.5rem;
@@ -74,15 +61,12 @@
         display: block;
       }
     }
-
-
   }
 
   &__actions {
     margin-bottom: 1.5rem;
 
     @media only screen and (min-width: $desktop) {
-
       margin-bottom: 2rem;
     }
   }
@@ -96,13 +80,10 @@
   &__left {
     display: flex;
     flex-direction: column;
-
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
     background-color: white;
-    // background-color: green;
     height: fit-content;
-    // justify-content: center;
     padding: 1.5rem 1rem 0;
 
     @media only screen and (min-width: $desktop) {
@@ -114,10 +95,6 @@
   }
 
   &__right {
-
-    // height: 50%;
-    // width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -136,9 +113,3 @@
     }
   }
 }
-
-// .footer {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-// }

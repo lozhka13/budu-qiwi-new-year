@@ -43,3 +43,21 @@ a {
 body {
   background-color: #B4CEFF;
 }
+
+.positive-body {
+  min-height: 100dvh;
+  background: linear-gradient(to top, #FFEE98 0%, #B4CEFF 50%);
+
+  @media only screen and (min-width: $desktop) {
+    background: linear-gradient(270deg, #FFEE98 0%, #B4CEFF 50%);
+  }
+}
+
+.negative-body {
+  min-height: 100dvh;
+  background: linear-gradient(to top, #8E52D5 0%, #B4CEFF 50%);
+
+  @media only screen and (min-width: $desktop) {
+    background: linear-gradient(270deg, #8E52D5 0%, #B4CEFF 50%);
+  }
+}

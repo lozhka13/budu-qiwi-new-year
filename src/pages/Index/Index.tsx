@@ -3,7 +3,6 @@ import Layout from "../../hoc/Layout/Layout";
 import "./Index.scss";
 import Button from "../../components/Button/Button";
 import AleIcon from "../../assets/ale-icon.svg";
-import Ale from "../../assets/ELKA.svg";
 import ElkaFull from "../../assets/elka-full.svg";
 import ElkaFullMobile from "../../assets/elka-full-mobile.svg";
 import { useNavigate } from "react-router-dom";

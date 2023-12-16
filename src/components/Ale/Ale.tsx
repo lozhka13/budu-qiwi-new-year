@@ -38,7 +38,7 @@ const Ale: React.FC<IAle> = (props) => {
     if (body !== null) {
       if (currentAleState > 2) {
         body.classList.add("positive-body");
-      } else {
+      } else if (currentAleState < 2) {
         body.classList.add("negative-body");
       }
     }

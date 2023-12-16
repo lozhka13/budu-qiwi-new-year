@@ -4,15 +4,11 @@
   padding: 0.5rem 0.75rem;
   border: 1px solid #E0E0E7;
   border-radius: 12px 12px 12px 3px;
-
   background-color: white;
   color: black;
   user-select: none;
-
   cursor: pointer;
-
   transition: 180ms;
-
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: $gap;

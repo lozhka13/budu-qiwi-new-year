@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AleIcon from "../../assets/ale-icon.svg";
 import QiwiIcon from "../../assets/qiwi-icon.svg";
 import "./Quiz.scss";

@@ -1,8 +1,7 @@
 import React from "react";
 import "./QuizProgressBar.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../store";
-import { writeResult } from "../../reducers/quizReducer";
 
 interface IQuizProgressBar {
   currentQuestion: number;
@@ -10,7 +9,7 @@ interface IQuizProgressBar {
 }
 
 const QuizProgressBar: React.FC<IQuizProgressBar> = (props) => {
-  const { currentQuestion, amountOfQuestion } = props;
+  const { currentQuestion } = props;
   const { total } = useSelector((state: RootState) => state.quiz);
 
   const classesFromMark: Record<number, string> = {
