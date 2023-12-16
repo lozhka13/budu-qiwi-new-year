@@ -11,6 +11,7 @@ const QuizProgressBar: React.FC<IQuizProgressBar> = (props) => {
 
   // const questionArray = Array(amountOfQuestion).fill("");
   const questionArray = Array(10).fill("");
+  // bad neutral good
 
   return (
     <div className="quiz-progress-bar">

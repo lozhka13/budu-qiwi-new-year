@@ -1,11 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import markReducer from "./reducers/markReducer";
-import headerReducer from "./reducers/headerReducer";
 
 export const store = configureStore({
   reducer: {
     mark: markReducer,
-    header: headerReducer,
   },
 });
 

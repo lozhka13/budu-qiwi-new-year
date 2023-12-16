@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../hoc/Layout/Layout";
 import "./Index.scss";
 import Button from "../../components/Button/Button";
@@ -14,6 +14,20 @@ const Index = () => {
   const handleClick = () => {
     navigate("/quiz");
   };
+
+  useEffect(() => {
+    const body: HTMLBodyElement | null = document.querySelector("body");
+    if (body !== null) {
+      body.classList.add("hero-body");
+    }
+
+    return () => {
+      if (body !== null) {
+        body.classList.remove("hero-body");
+      }
+    };
+  }, []);
+
   return (
     <Layout>
       <section className="hero">

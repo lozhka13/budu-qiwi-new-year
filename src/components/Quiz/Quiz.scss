@@ -1,1 +1,81 @@
-.quiz {}
+@import '../../scss/variables.scss';
+
+.quiz {
+  max-width: 578px;
+  max-height: 560px;
+  min-height: 560px;
+  margin-top: 52px;
+
+  background-color: #A2B9E5;
+  text-align: left;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 2px solid #E0E0E7;
+  // height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__icon {
+    display: flex;
+    align-items: flex-end;
+
+    img {
+
+      height: 45px;
+      width: 45px;
+
+      @media only screen and (min-width: $desktop) {
+        height: 60px;
+        width: 60px;
+      }
+
+    }
+  }
+
+  &__heading {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: .5rem;
+  }
+
+  &__question {
+    padding: 12px;
+    border: 1px solid #E0E0E7;
+    border-radius: 12px 12px 3px 12px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 20px;
+
+    }
+  }
+
+  &__state {
+    display: flex;
+    flex-direction: column;
+    grid-gap: .5rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    // margin-top: 96px;
+  }
+
+  &__answers {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    grid-gap: 12px;
+
+    @media only screen and (min-width: $desktop) {
+      grid-gap: .75rem;
+      padding-top: 2rem;
+    }
+  }
+}

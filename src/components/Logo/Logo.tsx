@@ -5,13 +5,20 @@ import "./Logo.scss";
 import { useLocation } from "react-router-dom";
 import MediaQuery from "react-responsive";
 
-const Logo = () => {
-  const location = useLocation();
+interface ILogo {
+  isHeaderMaximized?: boolean;
+}
+
+const Logo: React.FC<ILogo> = (props) => {
+  const { isHeaderMaximized = true } = props;
 
   return (
     <div className="logo">
-      <img src={LogoBlack} alt="БУДУ" className="" logo__icon--black />
-      {/* <img src={LogoWhite} alt="БУДУ" className="" logo__icon--white /> */}
+      {isHeaderMaximized ? (
+        <img src={LogoBlack} alt="БУДУ" className="" logo__icon--black />
+      ) : (
+        <img src={LogoWhite} alt="БУДУ" className="" logo__icon--white />
+      )}
     </div>
   );
 };

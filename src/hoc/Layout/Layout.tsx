@@ -6,15 +6,16 @@ import Container from "../Container/Container";
 interface ILayout {
   children: React.ReactNode;
   hideFooter?: boolean;
+  isHeaderMaximized?: boolean;
 }
 
 const Layout: React.FC<ILayout> = (props) => {
-  const { children, hideFooter = false } = props;
+  const { children, hideFooter = false, isHeaderMaximized = true } = props;
 
   return (
     <>
       <Container>
-        <Header />
+        <Header isHeaderMaximized={isHeaderMaximized} />
         <main className="main">{children}</main>
       </Container>
       {hideFooter ? null : <Footer />}

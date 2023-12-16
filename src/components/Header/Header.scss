@@ -4,17 +4,26 @@
   padding: .5rem 1rem;
 
   margin: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
+
   border-radius: 24px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
-  @media only screen and (min-width: $smallTablet) {
-    background-color: unset;
-    border-radius: unset;
-    margin: unset;
-    padding: 1.5rem 0rem;
+
+  &--minimized {
+    justify-content: center;
+  }
+
+  &--maximized {
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    @media only screen and (min-width: $desktop) {
+      background-color: unset;
+      border-radius: unset;
+      margin: unset;
+      padding: 1.5rem 0rem;
+    }
   }
 }

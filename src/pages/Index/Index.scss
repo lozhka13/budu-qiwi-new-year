@@ -1,6 +1,6 @@
 @import '../../scss/variables.scss';
 
-body {
+.hero-body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -8,11 +8,7 @@ body {
 
   @media only screen and (min-width: $desktop) {
     background-image: url('../../assets/hero-background.svg');
-
   }
-
-  // width: 100vw;
-  // height: 100vh;
 }
 
 .hero {
