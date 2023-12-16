@@ -87,6 +87,12 @@
     }
   }
 
+  &__chat {
+    display: flex;
+    align-items: center;
+    margin-top: $halfGap;
+  }
+
   &__left {
     display: flex;
     flex-direction: column;
