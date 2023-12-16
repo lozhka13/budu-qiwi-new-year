@@ -1,15 +1,23 @@
 @import '../../scss/variables.scss';
 
 .quiz-page {
-  min-height: 560px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 
-  &__img {
-    display: flex;
-    justify-content: center;
-    // align-items: center;
+  @media only screen and (min-width: $desktop) {
+    min-height: 560px;
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  &--advice-turn {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media only screen and (min-width: $desktop) {
+      display: grid;
+    }
+  }
+
 
   //   &__top {
   //     display: grid;

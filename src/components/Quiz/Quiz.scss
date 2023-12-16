@@ -1,21 +1,25 @@
 @import '../../scss/variables.scss';
 
 .quiz {
-  max-width: 578px;
-  // max-height: 560px;
-  min-height: 560px;
-  margin-top: 52px;
+  width: 100%; // max-height: 560px;
+  // margin-top: 52px;
 
-  background-color: #A2B9E5;
   text-align: left;
   color: white;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  border: 2px solid #E0E0E7;
+  padding: 0 1.5rem 1.5rem 1.5rem;
   // height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media only screen and (min-width: $desktop) {
+    padding: 1.5rem 1.5rem 1.5rem;
+    border-radius: 1.5rem;
+    background-color: #A2B9E5;
+    border: 2px solid #E0E0E7;
+    min-height: 592px;
+    width: 578px;
+  }
 
   &__icon {
     display: flex;

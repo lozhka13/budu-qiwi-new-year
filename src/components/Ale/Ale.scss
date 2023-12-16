@@ -1,3 +1,48 @@
 @import '../../scss/variables.scss';
 
-.ale {}
+.ale {
+
+  @media only screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    user-select: none;
+  }
+
+
+  &--answer-turn {
+    display: none;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
+
+
+  &--advice-turn {
+    height: 50%;
+    width: 100%;
+
+    @media only screen and (min-width: $desktop) {
+      height: auto;
+    }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+  }
+}
+
+.positive-body {
+  min-height: 100dvh;
+  background: linear-gradient(to top, #FFEE98 0%, #B4CEFF 50%);
+
+  @media only screen and (min-width: $desktop) {
+    background: linear-gradient(270deg, #FFEE98 0%, #B4CEFF 50%);
+
+  }
+}
