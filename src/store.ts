@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import markReducer from "./reducers/markReducer";
+import quizReducer from "./reducers/quizReducer";
 
 export const store = configureStore({
   reducer: {
-    mark: markReducer,
+    quiz: quizReducer,
   },
 });
 
