@@ -7,13 +7,27 @@
     justify-content: center;
   }
 
+  img {
+    user-select: none;
+  }
+
+
   &--answer-turn {
     display: none;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+    }
   }
+
 
   &--advice-turn {
     height: 50%;
     width: 100%;
+
+    @media only screen and (min-width: $desktop) {
+      height: auto;
+    }
 
     img {
       max-height: 100%;
