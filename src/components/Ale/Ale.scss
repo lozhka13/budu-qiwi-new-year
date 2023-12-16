@@ -1,15 +1,30 @@
 @import '../../scss/variables.scss';
 
 .ale {
-  display: none;
 
   @media only screen and (min-width: $desktop) {
     display: flex;
     justify-content: center;
   }
+
+  &--answer-turn {
+    display: none;
+  }
+
+  &--advice-turn {
+    height: 50%;
+    width: 100%;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+  }
 }
 
 .positive-body {
+  min-height: 100dvh;
   background: linear-gradient(to top, #FFEE98 0%, #B4CEFF 50%);
 
   @media only screen and (min-width: $desktop) {

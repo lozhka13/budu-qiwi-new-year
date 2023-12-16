@@ -19,6 +19,11 @@
 
   span {
     line-height: 1.4;
+    font-size: 14px;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
   }
 
   img {

@@ -13,7 +13,11 @@ const QuizPage: React.FC<IQuizPage> = (props) => {
 
   return (
     <Layout hideFooter isHeaderMaximized={false}>
-      <div className="quiz-page">
+      <div
+        className={`quiz-page quiz-page--${
+          isAnswerTurn ? "answer-turn" : "advice-turn"
+        }`}
+      >
         <Quiz isAnswerTurn={isAnswerTurn} setIsAnswerTurn={setIsAnswerTurn} />
         <Ale isAnswerTurn={isAnswerTurn} />
       </div>

@@ -60,7 +60,7 @@ const Ale: React.FC<IAle> = (props) => {
   };
 
   return (
-    <div className="ale">
+    <div className={`ale ale--${isAnswerTurn ? "answer-turn" : "advice-turn"}`}>
       <img
         src={aleMood[currentAleState][total[currentQuestion - 1] ?? 10]}
         alt=""

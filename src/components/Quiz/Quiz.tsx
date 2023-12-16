@@ -35,6 +35,11 @@ const Quiz: React.FC<IQuiz> = (props) => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values: any, actions: any) => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
     if (isAnswerTurn) {
       const mark = total.reduce((accumulator, mark) => {
         return accumulator + mark;
@@ -61,15 +66,6 @@ const Quiz: React.FC<IQuiz> = (props) => {
         values: initialValues,
       });
 
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-
-      actions.resetForm({
-        values: { mark: 0 },
-      });
       setIsAnswerTurn(false);
     } else {
       if (currentAdvice === 9) {
