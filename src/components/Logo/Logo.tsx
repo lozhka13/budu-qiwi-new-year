@@ -2,8 +2,6 @@ import React from "react";
 import LogoWhite from "../../assets/logo-white.svg";
 import LogoBlack from "../../assets/logo-black.svg";
 import "./Logo.scss";
-import { useLocation } from "react-router-dom";
-import MediaQuery from "react-responsive";
 
 interface ILogo {
   isHeaderMaximized?: boolean;

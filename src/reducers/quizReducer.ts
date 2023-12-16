@@ -13,7 +13,6 @@ export const quizReducer = createSlice({
   initialState,
   reducers: {
     writeResult(state, actions: PayloadAction<Record<string, number>>) {
-      // console.log("actions.payload", actions.payload);
       state.total[actions.payload.index] = actions.payload.mark;
       state.currentQuestion = state.currentQuestion + 1;
     },

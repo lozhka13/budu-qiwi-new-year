@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./Quiz.scss";
-import { useSelector } from "react-redux";
-import { RootState } from "../../store";
 import Layout from "../../hoc/Layout/Layout";
 import Quiz from "../../components/Quiz/Quiz";
 import Ale from "../../components/Ale/Ale";
