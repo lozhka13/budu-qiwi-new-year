@@ -6,33 +6,26 @@ import questions from "../../data/questions.json";
 import { Form, Formik } from "formik";
 import Answer from "../Answer/Answer";
 import Button from "../Button/Button";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { writeResult } from "../../reducers/markReducer";
+import { setCurrentQuestion, writeResult } from "../../reducers/markReducer";
+import { RootState } from "../../store";
 
-interface IQuiz {
-  information?: string;
-  currentQuestion: number;
-  setCurrentQuestion: any;
-}
-
-const Quiz: React.FC<IQuiz> = (props) => {
-  const { information, currentQuestion, setCurrentQuestion } = props;
+const Quiz: React.FC = (props) => {
   const navigator = useNavigate();
   const initialValues = {
     mark: 0,
   };
 
+  const { currentQuestion } = useSelector((state: RootState) => state.mark);
+
   const dispatch = useDispatch();
 
-  const formikRef = useRef<any>(null);
-
   const handleSubmit = (values: any, actions: any) => {
-    // console.log("values", values);
-    // console.log("resetForm", resetForm);
     dispatch(
       writeResult({ index: currentQuestion, mark: Number(values.mark) })
     );
+    dispatch(setCurrentQuestion(currentQuestion + 1));
 
     actions.resetForm({
       values: initialValues,
@@ -47,17 +40,6 @@ const Quiz: React.FC<IQuiz> = (props) => {
     actions.resetForm({
       values: { mark: 0 },
     });
-    // if (currentQuestion < questions.length - 1) {
-    setCurrentQuestion((prev: number) => prev + 1);
-    // } else {
-    // if (layoutRef.current) {
-    //   layoutRef.current.classList.remove("page-entry");
-    //   layoutRef.current.classList.add("page-exit");
-    // }
-    // setTimeout(() => {
-    //   navigator(`/`);
-    // }, 500);
-    // }
   };
 
   return (
@@ -78,14 +60,12 @@ const Quiz: React.FC<IQuiz> = (props) => {
       </div>
       <div className="quiz__content">
         <Formik
-          innerRef={formikRef}
           initialValues={initialValues}
           onSubmit={(values, actions) => {
             handleSubmit(values, actions);
           }}
         >
           {({ values }) => {
-            console.log("values", values);
             return (
               <Form>
                 <div className="quiz__answers">

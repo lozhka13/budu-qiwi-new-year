@@ -16,16 +16,12 @@ interface IQuizPage {}
 
 const QuizPage: React.FC<IQuizPage> = (props) => {
   const { total } = useSelector((state: RootState) => state.mark);
-  const [currentQuestion, setCurrentQuestion] = useState<number>(0);
 
   console.log("total", total);
   return (
     <Layout hideFooter isHeaderMaximized={false}>
       <div className="quiz-page">
-        <Quiz
-          currentQuestion={currentQuestion}
-          setCurrentQuestion={setCurrentQuestion}
-        />
+        <Quiz />
         <div className="quiz-page__img">
           <img src={Ale} alt="" />
         </div>
