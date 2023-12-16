@@ -44,6 +44,18 @@
       // }
     }
 
+    &--bad {
+      background-color: #FF4F29;
+    }
+
+    &--neutral {
+      background-color: #FCE40F;
+    }
+
+    &--good {
+      background-color: #62BC4B;
+    }
+
     &--passed {
       position: relative;
 

@@ -1,23 +1,21 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import questions from "../data/questions.json";
 
 const initialState = {
-  total: -1,
+  total: new Array(questions.length).fill(0),
 };
 
 export const markReducer = createSlice({
   name: "mark",
   initialState,
   reducers: {
-    addToTotal(state, actions: PayloadAction<number>) {
-      if (state.total === -1) {
-        state.total = actions.payload;
-      } else {
-        state.total += actions.payload;
-      }
+    writeResult(state, actions: PayloadAction<Record<string, number>>) {
+      // console.log("actions.payload", actions.payload);
+      state.total[actions.payload.index] = actions.payload.mark;
     },
   },
 });
 
-export const { addToTotal } = markReducer.actions;
+export const { writeResult } = markReducer.actions;
 
 export default markReducer.reducer;
